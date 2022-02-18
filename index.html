@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virajiyati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto Serif', sans-serif;
+
+        }
+
+        .home{
+            width: 100vw;
+            height:100vh;
+            background: url(./img/Back_image.jpg);
+            background-repeat:no-repeat ;
+            background-size: cover;
+            
+           }
+        .home header{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .home header .lefthead{
+            font-size: 30px;
+            font-weight: 800;
+            color: white;
+        }
+        .home header .righthead ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5px;
+        }
+        .home header .righthead ul li{ 
+            padding: 10px;
+            list-style: none;
+        }
+         .home header .righthead ul li:hover{
+             border-bottom:1px solid teal ;
+         }
+         .home header .righthead ul li a{ 
+            color:teal;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        /* for  main */
+        
+        .home .main{
+            width: 100%;
+            height:auto;
+            color: white;
+        }
+        .main .content {
+            margin-top: 10%;
+            margin-left: 5%;
+            font-family: 'Roboto Serif', sans-serif;
+            
+        }
+        
+        .main .content #contentheading{
+            font-size: 35px;
+            padding: 10px;
+            color: teal;
+            animation:changecolor 5s infinite;
+        }
+        @keyframes changecolor{
+            from{
+                color:red;
+            }
+        }
+        .main .content #contenttext{
+            margin: 30px 10px;
+            animation: changewidth 10s infinite;
+            /* display: none; */
+            overflow: hidden;
+            height:15px;
+        }
+        @keyframes changewidth{
+            from{
+                display: block;
+                width: 0px;
+            
+            }
+            to{
+                display: block;
+                width: 90%;
+            }
+        }
+        .main .content .innercontent{
+            background-color: #3339;
+            padding: 5px;
+
+        }
+        .main .content #contentmessage{
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .content .formcontent{
+            margin: 5% 1%;
+        }
+        .content .formcontent form{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .content .formcontent .user{
+            margin: 0px 40px 15px 0px;
+            background-color: #3349;
+            padding: 5px;
+
+            border: 1px solid white;
+        }
+        .content .formcontent input::placeholder{
+            color: white;
+        }
+        .content .formcontent input{
+            color:white;
+            font-size: 18px;
+            padding:5px;
+            background: none;
+            border: none;
+
+        }
+
+        @media(max-width:1000px) {
+            
+            .home header{
+                padding:30px;
+            }
+            .home header .righthead{
+                display: none;
+            }
+        }
+        </style>    
+</head>
+
+<body>
+    <div class="home">
+        <header>
+            <div class="lefthead">
+                virajyati
+            </div>
+            <div class="righthead">
+                <ul>
+                    <li><a href="#">About us </a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Message me</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="main">
+            <div class="content">
+                <div class="innercontent">
+                    <span>
+                        <strong id="contentheading"> Virajyati </strong><br>
+                     </span>
+                    <div id="contenttext">
+                     The Easy Vechile and path finder
+                     </div>
+            
+                    <span id="contentmessage">
+                         Please Tell me where do you want and where are you now ?
+                     </span> 
+                </div>
+                <div class="formcontent">
+                    <form action="">
+                        <div class="user userfrom">
+                            <input type="text" name="currentlocation" id="" placeholder="Your Current loaction">
+                            <label for="currentloaction">
+                                <i  class="fas fa-map-marker-alt"></i>
+                            </label>
+                        </div>
+                        <div class="user userto">
+                            <input type="text" name="destinationlocation" id="" placeholder="Your Destination location">
+                            <label for="destinationloaction">
+                                <i class="fas fa-flag"></i>                            </label>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit" style="background: white;color:black;padding: 10px; font-weight: 900;">
+                        </div>
+                    </form>
+                </div>   
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
